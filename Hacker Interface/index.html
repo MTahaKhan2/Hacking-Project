@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CyberX - Hacker Interface</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/bruteForceStyle.css">
+  <link rel="stylesheet" href="/DDoSstyle.css">
+  <link rel="stylesheet" href="/Torjan/trojan.css">
+  <link rel="stylesheet" href="/CameraPanel.css">
+
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+  
+  <div class="dashboard">
+    <div class="panel terminal">
+      <h2>Terminal</h2>
+      <pre id="terminalOutput">[+] Initializing CyberX System...</pre>
+      <div class="input-line">
+        <span class="prompt">root@cyberx:~#</span>
+        <input type="text" id="terminalInput" autofocus />
+      </div>
+    </div>
+
+    <div class="panel system-info">
+      <h2>System Info</h2>
+      <ul>
+        <li>CPU Usage: <span id="cpu">18%</span></li>
+        <li>Memory: <span id="mem">42%</span></li>
+        <li>Disk I/O: <span id="disk">12 MB/s</span></li>
+      </ul>
+    </div>
+
+    <div class="panel network">
+      <h2>Network Monitor</h2>
+      <pre id="networkLog">Tracing IP...\n192.168.0.1 -> 8.8.8.8</pre>
+    </div>
+
+    <div class="panel clock">
+      <h2>System Clock</h2>
+      <div id="clock">--:--:--</div>
+    </div>
+  </div>
+
+<!-- Google Map Panel -->
+ <div id="mapIframeContainer" class="draggable-iframe">
+  <div class="iframe-header">Target Location: Pakistan</div>
+  <iframe 
+    src="https://www.google.com/maps?q=pakistan&output=embed" 
+    width="100%" 
+    height="100%" 
+    style="border:0;" 
+    allowfullscreen 
+    loading="lazy">
+  </iframe>
+</div>
+
+
+<!-- Brute Force Attack Simulation -->
+<div id="bruteForceWindow" class="brute-draggable-window" style="display: block;">
+  <div class="brute-header">Brute Force Attack</div>
+  <div class="brute-content" id="bruteForceOutput">
+    [*] Starting brute force attempt...<br>
+    Attempting login on target IP: <span class="target-ip">192.168.1.10</span>
+  </div>
+</div>
+
+
+<!-- DDoS Attack Simulation -->
+
+<div id="ddosAttackPanel" class="ddos-draggable-window" style="display: block;">
+  <div class="ddos-header">DDoS Attack Monitor</div>
+  <div class="ddos-content" id="ddosOutput">
+    [*] Initializing attack sequence...<br>
+    Target: <span class="target-ip">192.168.0.88</span><br>
+    Attack Type: SYN Flood<br><br>
+    Status:<br>
+    <span id="ddosStatus">Waiting for connection...</span>
+  </div>
+</div>
+
+<!-- Trojan Deployment Simulation -->
+
+<div id="trojanDeployContainer" class="trojan-drag-panel" style="display: block;">
+  <div class="trojan-drag-header">💀 Trojan Deployment</div>
+  <div class="trojan-drag-body" id="trojanDeployContent">
+    <p>[+] Connecting to remote host...</p>
+    <p>[+] Injecting Trojan payload...</p>
+    <p>[+] Writing to memory...</p>
+    <p>[+] Trojan successfully deployed!</p>
+  </div>
+</div>
+
+<!-- Camera Panel Simulation -->
+<div id="cameraWindow" class="draggable-camera">
+  <div class="camera-header">🔴 CAMERA MONITOR ACTIVE</div>
+  <div class="camera-body">
+    <div class="camera-feed">
+      
+      <video autoplay loop muted>
+        <source src="assets/fake-feed.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="camera-status">
+      <span class="camera-dot"></span> Accessing live feed...
+    </div>
+  </div>
+</div>
+
+
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+  </script>
+
+
+
+  <script src="/script.js"></script>
+  <script src="/matrix.js"></script>
+  <script src="/malwareScreen.js"></script>
+  <script src="/virusScreen.js"></script>
+  <script src="/GoogleMap.js"></script>
+  <script src="/bruteForce.js"></script>
+  <script src="/DDoS.js"></script>
+  <script src="/Torjan/trojan.js"></script>
+  <script src="/googleMap.js"></script>
+  <script src="/CameraPanel.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+/* DDoS Attack Monitor */
+.ddos-draggable-window {
+  position: fixed;
+  top: 150px;
+  left: 120px;
+  width: 420px;
+  background: rgba(0, 0, 0, 0.85) url('/images/ddos-bg.jpg') no-repeat center center;
+  background-size: cover;
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 18px #00ffff;
+  color: #00e6e6;
+  font-family: 'Courier New', monospace;
+  border-radius: 10px;
+  z-index: 9998;
+  user-select: none;
+}
+
+.ddos-header {
+  padding: 10px 16px;
+  background: #00ffff;
+  color: black;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: move;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.ddos-content {
+  max-height: 250px; /* Set fixed height */
+  overflow-y: auto;  /* Enables scrolling */
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+
+  /* Optional: customize scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: #00ffff transparent;
+}
+
+.ddos-content::-webkit-scrollbar {
+  width: 6px;
+}
+.ddos-content::-webkit-scrollbar-thumb {
+  background-color: #00ffff;
+  border-radius: 4px;
+}
